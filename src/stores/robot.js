@@ -33,10 +33,10 @@ function create_robot_store() {
 			if (--new_robot.response_time <= 0) {
 				// Higher response times are easier to play against
 				if ( ball.speed_y > 0 ) {
-					new_robot.response_time = ball.pos_y > 69 ? 34 : 55;
+					new_robot.response_time = ball.pos_y > 69 ? 21 : 34;
 					new_robot.speed_x = ball.pos_x - (new_robot.pos_x + 10) > 0 ? 1 : -1;
 				} else {
-					new_robot.response_time = ball.pos_y < 42 ? 13 : 21;
+					new_robot.response_time = ball.pos_y < 42 ? 8 : 13;
 					new_robot.speed_x = aprox_intersect(ball) - (new_robot.pos_x + 10) > 0 ? 1 : -1;
 				}
 			}
